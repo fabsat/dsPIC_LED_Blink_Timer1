@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=LED_Blink_Timer.X
+PROJECTNAME=dsPIC_LED_Blink_Timer1
 
 # Active Configuration
 DEFAULTCONF=default

@@ -10,9 +10,9 @@ CND_CONF=default
 CND_DISTDIR=dist
 TMPDIR=build/${CND_CONF}/${IMAGE_TYPE}/tmp-packaging
 TMPDIRNAME=tmp-packaging
-OUTPUT_PATH=dist/${CND_CONF}/${IMAGE_TYPE}/LED_Blink_Timer.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
-OUTPUT_BASENAME=LED_Blink_Timer.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
-PACKAGE_TOP_DIR=ledblinktimer.x/
+OUTPUT_PATH=dist/${CND_CONF}/${IMAGE_TYPE}/dsPIC_LED_Blink_Timer1.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+OUTPUT_BASENAME=dsPIC_LED_Blink_Timer1.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+PACKAGE_TOP_DIR=dspicledblinktimer1/
 
 # Functions
 function checkReturnCode
@@ -57,15 +57,15 @@ mkdir -p ${TMPDIR}
 
 # Copy files and create directories and links
 cd "${TOP}"
-makeDirectory ${TMPDIR}/ledblinktimer.x/bin
+makeDirectory ${TMPDIR}/dspicledblinktimer1/bin
 copyFileToTmpDir "${OUTPUT_PATH}" "${TMPDIR}/${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}" 0755
 
 
 # Generate tar file
 cd "${TOP}"
-rm -f ${CND_DISTDIR}/${CND_CONF}/package/ledblinktimer.x.tar
+rm -f ${CND_DISTDIR}/${CND_CONF}/package/dspicledblinktimer1.tar
 cd ${TMPDIR}
-tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/package/ledblinktimer.x.tar *
+tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/package/dspicledblinktimer1.tar *
 checkReturnCode
 
 # Cleanup
